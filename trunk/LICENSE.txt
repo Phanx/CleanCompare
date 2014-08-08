@@ -1,33 +1,32 @@
-Copyright (c) 2014 A. "Phanx" Kinley <addons@phanx.net>
+Copyright (c) 2014 Phanx. All rights reserved.
 
-Permission is granted for anyone to use, study, copy, merge, embed, modify,
-and redistribute modified and unmodified copies of this software, subject
-to the following conditions:
+Permission is granted for anyone to use, read, or otherwise interpret
+this software for any purpose, without any restrictions.
 
-1) Unmodified copies of this software may be redistributed or bundled with
-   any other software, provided that each copy contains the above copyright
-   notice and this license.
+Permission is granted for anyone to modify this software or sample from
+it, and to distribute such modified versions or derivative works as long
+as neither the names of this software nor its author(s) are used in the
+name or title of the work or in any other way that may cause it to be
+confused with this software.
 
-2) Modified versions of this software and works derived from this software
-	must be wholly renamed, so that they do not include the names of this
-	software or its author outside of an optional acknowledgement or credit.
+Permission is granted for anyone to aggregate this software with other
+works not derived from this software for the purpose of creating a user
+interface compilation for "World of Warcraft" and to distribute such
+compilations as long as the software is not modified in any way,
+including by modifying or removing any files.
 
-4) The names of this software or its author shall not be used to promote,
-   endorse or advertise any modified versions of this software, or any works
-   derived from this software, except to acknowledge the contributions of
-   the author or with explicit written permission from the copyright holder.
+This software may not be distributed standalone or in any other way, in
+whole or in part, modified or unmodified, without specific prior written
+permission from the author(s) of this software.
 
-5) This software may not be sold or otherwise exchanged for value, either
-   alone or bundled with other software. Distributors may charge fees for
-   alternative distribution methods, so long as that distributor also makes
-   the software freely available through at least one method that does not
-   require any payment, registration, or provision of personal information.
+The names of this software and/or its author(s) may not be used to
+promote or endorse works derived from this software without specific
+prior written permission from the author(s) of this software.
 
-THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
-TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE
-FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL,
-INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO
-USE THIS SOFTWARE OR FROM OTHER DEALINGS IN THIS SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.

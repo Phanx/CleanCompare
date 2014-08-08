@@ -1,13 +1,5 @@
-
 CleanCompare
 ===============
-
-* <http://www.wowinterface.com/downloads/info-CleanCompare.html>
-* <http://www.curse.com/addons/wow/cleancompare>
-
-
-Description
---------------
 
 CleanCompare removes stats that aren't relevant for your current class
 and specialization from the stat change summaries in item comparison
@@ -18,22 +10,30 @@ conversions; it is intended as a lightweight alternative to RatingBuster
 for leveling characters and casual players.
 
 
+Download
+-----------
+
+* [WoWInterface](http://www.wowinterface.com/downloads/info-CleanCompare.html)
+* [Curse](http://www.curse.com/addons/wow/cleancompare)
+
+
 Feedback
 -----------
 
-**Post a comment on WoWInterface.** If you are reporting a bug, please
-include detailed instructions I can follow to reproduce the bug myself,
-whether or not it still happens when all other addons are disabled, and
-the exact text of the first related error message (if any) from BugSack.
+Post a ticket on either download site, or a comment on WoWInterface.
 
-If you need to contact me privately, you can send a private message to
-Phanx on either download site, or email me at <addons@phanx.net>.
-**Please note** that I do not provide private addon support or tutoring
-of any kind; post a comment or forum thread instead!
+If you are reporting a bug, please include directions I can follow to
+reproduce the bug, whether it still happens when all other addons are
+disabled, and the exact text of the related error message (if any) from 
+[BugSack](http://www.wowinterface.com/downloads/info5995-BugSack.html).
+
+If you need to contact me privately, you can send me a private message
+on either download site, or email me at <addons@phanx.net>.
 
 
 License
 ----------
 
-Copyright (c) 2014 Phanx. All rights reserved. See the accompanying
-LICENSE file for additional information.
+Copyright (c) 2014 Phanx <addons@phanx.net>. All rights reserved.  
+See the accompanying LICENSE file for information about the conditions
+under which redistribution and modification may be allowed.
