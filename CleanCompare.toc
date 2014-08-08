@@ -1,0 +1,22 @@
+## Interface: 50400
+## Version: 5.4.2.1
+
+## Title: Clean Compare
+## Notes: Removes irrelevant stats from item comparison tooltips.
+## Notes-deDE: Entfernt unwesentliche Werte aus den Gegenstandsvergleich-Tooltips.
+## Notes-esES: Elimina estatísticos irrelevantes de los tooltips de comparación de los objetos.
+## Notes-esMX: Elimina estatísticos irrelevantes de los tooltips de comparación de los objetos.
+
+## Author: Phanx
+## X-Email: addons@phanx.net
+## X-Copyright: Copyright (c) 2014 A. "Phanx" Kinley
+## X-License: See LICENSE.txt for details.
+## X-CompatibleLocales: deDE, enUS, esES, esMX, frFR, itIT, ptBR, koKR, ruRU, zhCN, zhTW
+## X-Website: http://www.wowinterface.com/downloads/info-CleanCompare.html
+## X-Curse-Project-Name: cleancompare
+## X-WoWI-ID:
+
+## SavedVariables: CleanCompareDB
+
+Addon.lua
+Options.lua

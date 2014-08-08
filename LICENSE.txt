@@ -1,0 +1,33 @@
+Copyright (c) 2014 A. "Phanx" Kinley <addons@phanx.net>
+
+Permission is granted for anyone to use, study, copy, merge, embed, modify,
+and redistribute modified and unmodified copies of this software, subject
+to the following conditions:
+
+1) Unmodified copies of this software may be redistributed or bundled with
+   any other software, provided that each copy contains the above copyright
+   notice and this license.
+
+2) Modified versions of this software and works derived from this software
+	must be wholly renamed, so that they do not include the names of this
+	software or its author outside of an optional acknowledgement or credit.
+
+4) The names of this software or its author shall not be used to promote,
+   endorse or advertise any modified versions of this software, or any works
+   derived from this software, except to acknowledge the contributions of
+   the author or with explicit written permission from the copyright holder.
+
+5) This software may not be sold or otherwise exchanged for value, either
+   alone or bundled with other software. Distributors may charge fees for
+   alternative distribution methods, so long as that distributor also makes
+   the software freely available through at least one method that does not
+   require any payment, registration, or provision of personal information.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT,
+TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL,
+INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO
+USE THIS SOFTWARE OR FROM OTHER DEALINGS IN THIS SOFTWARE.
