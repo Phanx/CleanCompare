@@ -401,8 +401,15 @@ end
 ------------------------------------------------------------------------
 
 local function AddHooks(tooltip)
+	if not tooltip then return end
+
 	hooksecurefunc(tooltip, "Show", FixHeight)
-	hooksecurefunc(tooltip, "SetHyperlinkCompareItem", HideIrrelevantStats)
+
+	if tooltip.SetCompareItem then -- WOD
+		hooksecurefunc(tooltip, "SetCompareItem", HideIrrelevantStats)
+	else -- MOP
+		hooksecurefunc(tooltip, "SetHyperlinkCompareItem", HideIrrelevantStats)
+	end
 end
 
 AddHooks(ShoppingTooltip1)
