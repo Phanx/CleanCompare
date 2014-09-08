@@ -16,6 +16,19 @@ local L = {
 	SINGLE_PROFILE_TOOLTIP = "Use a single profile for all specializations for your class.",
 	SOCKETS = "Sockets",
 }
+if GetLocale() == "deDE" then
+	L.PANEL_DESC = "Mit diesem Optionen kann man wählen, auf welchen Statistiken in Gegenstandsvergleich-Tooltips jeder Spezialisierungen Ihrer aktuellen Klasse anzeigen."
+	L.RESET_TOOLTIP = "Auf die Standardoptionen Ihrer aktuellen Klasse zurücksetzen."
+	L.SINGLE_PROFILE = "Einzelner Profil"
+	L.SINGLE_PROFILE_TOOLTIP = "Einen einzelnen Profil für alle Spezialisierungen Ihrer aktuellen Klasse verwenden."
+	L.SOCKETS = "Sockeln"
+elseif GetLocale():match("^es") then
+	L.PANEL_DESC = "Estas opciones te permiten escoger qué estadísticas se muestran en las descripciones de las comparaciones de los artículos."
+	L.RESET_TOOLTIP = "Restablecer a la configuración por defecto para todas especializaciones de tu clase actual."
+	L.SINGLE_PROFILE = "Único perfil"
+	L.SINGLE_PROFILE_TOOLTIP = "Usar un único perfil para todas especializacones de tu clase."
+	L.SOCKETS = "Ranuras"
+end
 
 local Options = CreateFrame("Frame", ADDON.."Options", InterfaceOptionsFramePanelContainer)
 Options.name = GetAddOnMetadata(ADDON, "Title") or ADDON
