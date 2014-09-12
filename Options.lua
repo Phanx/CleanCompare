@@ -17,16 +17,16 @@ local L = {
 	SOCKETS = "Sockets",
 }
 if GetLocale() == "deDE" then
-	L.PANEL_DESC = "Mit diesem Optionen kann man wählen, auf welchen Statistiken in Gegenstandsvergleich-Tooltips jeder Spezialisierungen Ihrer aktuellen Klasse anzeigen."
-	L.RESET_TOOLTIP = "Auf die Standardoptionen Ihrer aktuellen Klasse zurücksetzen."
-	L.SINGLE_PROFILE = "Einzelner Profil"
-	L.SINGLE_PROFILE_TOOLTIP = "Einen einzelnen Profil für alle Spezialisierungen Ihrer aktuellen Klasse verwenden."
-	L.SOCKETS = "Sockeln"
+	L.PANEL_DESC = "Diese Einstellungen ermöglichen Euch, die Statistiken auswählen, die für jede Spezialisierung Eurer Klasse in der Vergleichenstooltips angezeigt werden."
+	L.RESET_TOOLTIP = "Auf die Standardeinstellungen für alle Spezialisierung Eurer Klasse zurücksetzen."
+	L.SINGLE_PROFILE = "Einzelnes Profil"
+	L.SINGLE_PROFILE_TOOLTIP = "Das gleiche Profil für alle Spezialisierung Eurer Klasse verwenden."
+	L.SOCKETS = "Sockel"
 elseif GetLocale():match("^es") then
-	L.PANEL_DESC = "Estas opciones te permiten escoger qué estadísticas se muestran en las descripciones de las comparaciones de los artículos."
-	L.RESET_TOOLTIP = "Restablecer a la configuración por defecto para todas especializaciones de tu clase actual."
+	L.PANEL_DESC = "Estas opciones te permiten escoger qué estadísticas se muestran en las descripciones de comparación para cada especalización de tu clase."
+	L.RESET_TOOLTIP = "Restablece la configuración predeterminada para todas las especializaciones de tu clase."
 	L.SINGLE_PROFILE = "Único perfil"
-	L.SINGLE_PROFILE_TOOLTIP = "Usar un único perfil para todas especializacones de tu clase."
+	L.SINGLE_PROFILE_TOOLTIP = "Use un único perfil para todas las especializaciones de tu clase."
 	L.SOCKETS = "Ranuras"
 end
 
