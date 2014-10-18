@@ -85,7 +85,7 @@ Options:SetScript("OnShow", function()
 	end)
 
 	local TabPanel = CreateFrame("Frame", nil, Options)
-	TabPanel:SetPoint("TOPLEFT", Notes, "BOTTOMLEFT", 0, -32)
+	TabPanel:SetPoint("TOPLEFT", Notes, "BOTTOMLEFT", 0, -24)
 	TabPanel:SetPoint("BOTTOMRIGHT", Options, -16, 16)
 	TabPanel:SetBackdrop({
 		bgFile = "Interface\\ChatFrame\\ChatFrameBackground",
@@ -166,7 +166,7 @@ Options:SetScript("OnShow", function()
 		local stats = {}
 		local hidden = {
 			[ITEM_MOD_HEALTH_REGEN_SHORT] = true,
-			[ITEM_MOD_POWER_REGEN0_SHORT] = true,
+			[ITEM_MOD_HEALTH_REGENERATION_SHORT] = true,
 			[EMPTY_SOCKET_BLUE] = true,
 			[EMPTY_SOCKET_COGWHEEL] = true,
 			[EMPTY_SOCKET_HYDRAULIC] = true,
@@ -219,11 +219,11 @@ Options:SetScript("OnShow", function()
 			box.stat = statToKey[stats[i]]
 
 			if i == 1 then
-				box:SetPoint("TOPLEFT", TabPanel, 16, -16 - 44)
+				box:SetPoint("TOPLEFT", TabPanel, 16, -16 - 46)
 			elseif i == breakpoint then
-				box:SetPoint("TOPLEFT", TabPanel, "TOP", 8, -16 - 44)
+				box:SetPoint("TOPLEFT", TabPanel, "TOP", 8, -16 - 46)
 			else
-				box:SetPoint("TOPLEFT", Toggles[i-1], "BOTTOMLEFT", 0, -4)
+				box:SetPoint("TOPLEFT", Toggles[i-1], "BOTTOMLEFT", 0, -3)
 			end
 
 			Toggles[i] = box
