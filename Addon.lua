@@ -63,6 +63,7 @@ local defaultStats = {
 		HEALTH_REGENERATION = true,
 		LEECH = true,
 		MASTERY = true,
+		MULTISTRIKE = true,
 		PVP_POWER = true,
 		RESILIENCE = true,
 		SOCKET = true,
