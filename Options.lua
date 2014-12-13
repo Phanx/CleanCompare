@@ -14,7 +14,7 @@ local L = {
 	SOCKETS = "Sockets",
 }
 if GetLocale() == "deDE" then
-	L.PANEL_DESC = "Diese Einstellungen ermöglichen Euch, die Statistiken auswählen, die für jede Spezialisierung Eurer Klasse in der Vergleichenstooltips angezeigt werden."
+	L.PANEL_DESC = "Diese Einstellungen ermöglichen das Auswählen der Statistiken, die für jede Spezialisierung Eurer Klasse in der Vergleichens-Tooltipps anzuzeigen."
 	L.RESET_TOOLTIP = "Auf die Standardeinstellungen für alle Spezialisierung Eurer Klasse zurücksetzen."
 	L.SINGLE_PROFILE = "Einzelnes Profil"
 	L.SINGLE_PROFILE_TOOLTIP = "Das gleiche Profil für alle Spezialisierung Eurer Klasse verwenden."
