@@ -325,8 +325,15 @@ local function FixHeight(tooltip)
 	end
 end
 
+local junk = {
+	[""] = true,
+	[" "] = true,
+	[ITEM_COMPARISON_CYCLING_DISABLED_MSG_MAINHAND] = true,
+	[ITEM_COMPARISON_CYCLING_DISABLED_MSG_OFFHAND] = true,
+}
+
 local function HideIrrelevantStats(tooltip)
-	--print(ADDON, "HideIrenabledStats", tooltip:GetName())
+	--print(ADDON, "HideIrrelevantStats", tooltip:GetName())
 	local checked, removed, title = 0, 0
 	local lines = left[tooltip]
 	for i = 1, tooltip:NumLines() do
@@ -346,7 +353,7 @@ local function HideIrrelevantStats(tooltip)
 				stat = statToKey[stat]
 				checked = checked + 1
 			end
-			if stat and not enabledStats[stat] then
+			if (stat and not enabledStats[stat]) or junk[text] then
 				--print("ignored stat")
 				line:SetText(nil)
 				removed = removed + 1
