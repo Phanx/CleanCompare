@@ -1,7 +1,7 @@
 --[[--------------------------------------------------------------------
 	CleanCompare
 	Removes irrelevant stats from item comparison tooltips.
-	Copyright (c) 2014 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2015 Phanx <addons@phanx.net>. All rights reserved.
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...
