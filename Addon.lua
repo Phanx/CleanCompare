@@ -1,7 +1,8 @@
 --[[--------------------------------------------------------------------
 	CleanCompare
 	Removes irrelevant stats from item comparison tooltips.
-	Copyright (c) 2014-2015 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2016 Phanx <addons@phanx.net>. All rights reserved.
+	https://github.com/Phanx/CleanCompare
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...
@@ -11,30 +12,30 @@ _G[ADDON] = Addon -- #DEBUG
 ------------------------------------------------------------------------
 
 local statToKey = {
-	[ITEM_MOD_AGILITY_SHORT] = "AGILITY",
-	[ITEM_MOD_ATTACK_POWER_SHORT] = "ATTACK_POWER",
-	[ITEM_MOD_CRIT_RATING_SHORT] = "CRIT",
-	[ITEM_MOD_CR_AVOIDANCE_SHORT] = "AVOIDANCE",
-	[ITEM_MOD_CR_CLEAVE_SHORT] = "CLEAVE",
-	[ITEM_MOD_CR_LIFESTEAL_SHORT] = "LEECH",
-	[ITEM_MOD_CR_MULTISTRIKE_SHORT] = "MULTISTRIKE",
-	[ITEM_MOD_CR_READINESS_SHORT] = "READINESS",
-	[ITEM_MOD_CR_SPEED_SHORT] = "SPEED",
+	-- Properties
+	[RESISTANCE0_NAME] = "ARMOR",
 	[ITEM_MOD_DAMAGE_PER_SECOND_SHORT] = "DAMAGE_PER_SECOND",
-	[ITEM_MOD_DODGE_RATING_SHORT] = "DODGE",
+	-- Stats
+	[ITEM_MOD_AGILITY_SHORT] = "AGILITY",
+	[ITEM_MOD_ATTACK_POWER_SHORT] = "ATTACK_POWER",-- only on gear up to level 80
+	[ITEM_MOD_CR_AVOIDANCE_SHORT] = "AVOIDANCE", -- only on Mark of Supreme Doom
+	[ITEM_MOD_CRIT_RATING_SHORT] = "CRIT",
 	[ITEM_MOD_HASTE_RATING_SHORT] = "HASTE",
 	[ITEM_MOD_HEALTH_REGEN_SHORT] = "HEALTH_REGENERATION",
 	[ITEM_MOD_HEALTH_REGENERATION_SHORT] = "HEALTH_REGENERATION",
+	[ITEM_MOD_DODGE_RATING_SHORT] = "DODGE",
 	[ITEM_MOD_INTELLECT_SHORT] = "INTELLECT",
+	[ITEM_MOD_CR_LIFESTEAL_SHORT] = "LEECH", -- only on Mark of Supreme Doom
 	[ITEM_MOD_MASTERY_RATING_SHORT] = "MASTERY",
-	[ITEM_MOD_PARRY_RATING_SHORT] = "PARRY",
-	[ITEM_MOD_PVP_POWER_SHORT] = "PVP_POWER",
-	[ITEM_MOD_RESILIENCE_RATING_SHORT] = "RESILIENCE",
-	[ITEM_MOD_SPELL_POWER_SHORT] = "SPELL_POWER",
-	[ITEM_MOD_SPIRIT_SHORT] = "SPIRIT",
+	[ITEM_MOD_PARRY_RATING_SHORT] = "PARRY", -- only on gear up to level 85
+	[ITEM_MOD_PVP_POWER_SHORT] = "PVP_POWER", -- only on gear up to level 90
+	[ITEM_MOD_PVP_PRIMARY_STAT_SHORT] = "PVP_POWER", -- only on gear up to level 90
+	[ITEM_MOD_RESILIENCE_RATING_SHORT] = "PVP_RESILIENCE", -- only on gear up to level 90
+	[ITEM_MOD_CR_SPEED_SHORT] = "SPEED", -- only on Mark of Supreme Doom
 	[ITEM_MOD_STAMINA_SHORT] = "STAMINA",
 	[ITEM_MOD_STRENGTH_SHORT] = "STRENGTH",
 	[ITEM_MOD_VERSATILITY] = "VERSATILITY",
+	-- Sockets
 	[EMPTY_SOCKET_RED] = "SOCKET",
 	[EMPTY_SOCKET_YELLOW] = "SOCKET",
 	[EMPTY_SOCKET_BLUE] = "SOCKET",
@@ -43,7 +44,7 @@ local statToKey = {
 	[EMPTY_SOCKET_NO_COLOR] = "SOCKET", -- Prismatic
 	[EMPTY_SOCKET_COGWHEEL] = "SOCKET",
 	[EMPTY_SOCKET_HYDRAULIC] = "SOCKET", -- Sha-Touched
-	[RESISTANCE0_NAME] = "ARMOR",
+	-- Resistances
 	[RESISTANCE1_NAME] = "RESISTANCE",
 	[RESISTANCE2_NAME] = "RESISTANCE",
 	[RESISTANCE3_NAME] = "RESISTANCE",
@@ -63,9 +64,8 @@ local defaultStats = {
 		HEALTH_REGENERATION = true,
 		LEECH = true,
 		MASTERY = true,
-		MULTISTRIKE = true,
 		PVP_POWER = true,
-		RESILIENCE = true,
+		PVP_RESILIENCE = true,
 		SOCKET = true,
 		SPEED = true,
 		STAMINA = true,
@@ -90,15 +90,11 @@ local defaultStats = {
 	DRUID = {
 		[1] = { -- Balance
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[2] = { -- Feral
 			AGILITY = true,
 			ATTACK_POWER = true,
 			DAMAGE_PER_SECOND = true,
-			FERAL_ATTACK_POWER = true,
 			STRENGTH = true,
 		},
 		[3] = { -- Guardian
@@ -107,15 +103,12 @@ local defaultStats = {
 			AVOIDANCE = true,
 			ATTACK_POWER = true,
 			DAMAGE_PER_SECOND = true,
-			FERAL_ATTACK_POWER = true,
 			DODGE = true,
 			STRENGTH = true,
 		},
 		[4] = { -- Restoration
 			INTELLECT = true,
 			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 	},
 	HUNTER = {
@@ -129,9 +122,6 @@ local defaultStats = {
 	MAGE = {
 		[0] = {
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[1] = {}, [2] = {}, [3] = {}, -- Arcane, Fire, Frost
 	},
@@ -147,9 +137,6 @@ local defaultStats = {
 		},
 		[2] = { -- Mistweaver
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[3] = { -- Windwalker
 			AGILITY = true,
@@ -160,9 +147,6 @@ local defaultStats = {
 	PALADIN = {
 		[1] = { -- Holy
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[2] = { -- Protection
 			ARMOR = true,
@@ -184,9 +168,6 @@ local defaultStats = {
 	PRIEST = {
 		[0] = {
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[1] = {}, -- Discipline
 		[2] = {}, -- Holy
@@ -204,9 +185,6 @@ local defaultStats = {
 	SHAMAN = {
 		[1] = { -- Elemental
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 		[2] = { -- Enhancement
 			AGILITY = true,
@@ -215,16 +193,11 @@ local defaultStats = {
 		},
 		[3] = { -- Restoration
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
-			SPIRIT = true,
 		},
 	},
 	WARLOCK = {
 		[0] = {
 			INTELLECT = true,
-			MANA_REGENERATION = true,
-			SPELL_POWER = true,
 		},
 		[1] = {}, [2] = {}, [3] = {}, -- Affliction, Demonology, Destruction
 	},
@@ -253,14 +226,30 @@ local classDefaults, classDB
 local enabledStats = {}
 Addon.enabledStats = enabledStats
 
+local enabledStatsBySpec = {}
+Addon.enabledStatsBySpec = enabledStatsBySpec
+
 local function UpdateStatsList()
 	wipe(enabledStats)
-	for stat, enable in pairs(classDB[0]) do
-		enabledStats[stat] = enable
+	for spec = 1, GetNumSpecializations() do
+		local t = enabledStatsBySpec[spec] or {}
+		enabledStatsBySpec[spec] = wipe(t)
+		for stat, enable in pairs(classDB[0]) do
+			t[stat] = enable
+		end
+		if classDB[spec] then
+			for stat, enable in pairs(classDB[spec]) do
+				t[stat] = enable
+			end
+		end
 	end
 	local spec = GetSpecialization()
-	if classDB[spec] then
-		for stat, enable in pairs(classDB[spec]) do
+	if spec and enabledStatsBySpec[spec] then
+		for stat, enable in pairs(enabledStatsBySpec[spec]) do
+			enabledStats[stat] = enable
+		end
+	else
+		for stat, enable in pairs(classDB[0]) do
 			enabledStats[stat] = enable
 		end
 	end

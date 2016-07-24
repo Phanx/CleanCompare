@@ -1,7 +1,7 @@
 --[[--------------------------------------------------------------------
 	CleanCompare
 	Removes irrelevant stats from item comparison tooltips.
-	Copyright (c) 2014-2015 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2016 Phanx <addons@phanx.net>. All rights reserved.
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...
@@ -120,8 +120,6 @@ Options:SetScript("OnShow", function()
 		for i = 1, GetNumSpecializations() do
 			local tab = CreateFrame("Button", "$parentTab"..i, Options, "OptionsFrameTabButtonTemplate")
 			local _, name, _, icon, _, role = GetSpecializationInfo(i)
-		--	tab:SetFormattedText("|T%s:0|t %s %s(%s)", icon, name, GRAY_FONT_COLOR_CODE, _G[role])
-		--	tab:SetFormattedText("|T%s:0|t %s", icon, name)
 			tab:SetText(name)
 			tab:SetID(i)
 			if i == 1 then
@@ -235,7 +233,7 @@ Options:SetScript("OnShow", function()
 		end
 		--[[
 		if spec == 0 then
-			local coords = CLASS_BUTTONS[class]
+			local coords = CLASS_ICON_TCOORDS[class]
 			SpecIcon:SetTexture("Interface\\WorldStateFrame\\Icons-Classes")
 			SpecIcon:SetTexCoord(coords[1] + 0.02, coords[2] - 0.02, coords[3] + 0.02, coords[4] - 0.02)
 			SpecName:SetText(className)
@@ -263,9 +261,9 @@ Options:SetScript("OnShow", function()
 		SingleSpec:SetHitRectInsets(-16 - SingleSpec.Text:GetWidth(), 0, 0, 0)
 ]]
 		for i = 1, #Toggles do
-			local this = Toggles[i]
-			this:SetChecked(Addon.enabledStats[this.stat])
-			this:SetHitRectInsets(0, -16 - this.Text:GetWidth(), 0, 0)
+			local check = Toggles[i]
+			check:SetHitRectInsets(0, -16 - check.Text:GetWidth(), 0, 0)
+			check:SetChecked(Addon.enabledStatsBySpec[spec][check.stat])
 		end
 	end
 
