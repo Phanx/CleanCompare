@@ -1,8 +1,8 @@
 --[[--------------------------------------------------------------------
 	CleanCompare
 	Removes irrelevant stats from item comparison tooltips.
-	Copyright (c) 2014-2016 Phanx <addons@phanx.net>. All rights reserved.
-	https://github.com/Phanx/CleanCompare
+	Copyright (c) 2014-2017 Phanx <addons@phanx.net>. All rights reserved.
+	https://github.com/phanx-wow/CleanCompare
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...

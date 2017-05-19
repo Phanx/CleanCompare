@@ -1,7 +1,8 @@
 --[[--------------------------------------------------------------------
 	CleanCompare
 	Removes irrelevant stats from item comparison tooltips.
-	Copyright (c) 2014-2016 Phanx <addons@phanx.net>. All rights reserved.
+	Copyright (c) 2014-2017 Phanx <addons@phanx.net>. All rights reserved.
+	https://github.com/phanx-wow/CleanCompare
 ----------------------------------------------------------------------]]
 
 local ADDON, Addon = ...
@@ -39,7 +40,7 @@ Options:SetScript("OnShow", function()
 
 	local classRoles = {}
 	for i = 1, GetNumSpecializations() do
-		local _, _, _, _, _, role = GetSpecializationInfo(i)
+		local _, _, _, _, role = GetSpecializationInfo(i)
 		if not classRoles[role] then
 			table.insert(classRoles, _G[role])
 			classRoles[role] = true
