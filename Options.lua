@@ -71,7 +71,7 @@ Options:SetScript("OnShow", function()
 	end)
 	Reset:SetScript("OnLeave", GameTooltip_Hide)
 	Reset:SetScript("OnClick", function(this)
-		PlaySound("gsTitleOptionOK")
+		PlaySound(SOUNDKIT.GS_TITLE_OPTION_OK)
 		for spec = 1, #classDB do
 			local specDB = classDB[spec]
 			wipe(specDB)
@@ -103,7 +103,7 @@ Options:SetScript("OnShow", function()
 	SingleSpec.tooltipText = SINGLE_PROFILE_TOOLTIP
 	SingleSpec:SetScript("OnClick", function(this)
 		local checked = not not this:GetChecked()
-		PlaySound(checked and "igMainMenuOptionCheckBoxOn" or "igMainmenuOptionCheckBoxOff")
+		PlaySound(checked and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON or SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
 		spec = checked and 0 or 1
 		Options.refresh()
 	end)
@@ -112,7 +112,7 @@ Options:SetScript("OnShow", function()
 	local Tabs = {}
 	do
 		local function clicktab(this)
-			PlaySound("igCharacterInfoTab")
+			PlaySound(SOUNDKIT.IG_CHARACTER_INFO_TAB)
 			PanelTemplates_Tab_OnClick(this, Options)
 			spec = this:GetID()
 			Options.refresh()
@@ -193,7 +193,7 @@ Options:SetScript("OnShow", function()
 
 		local function checkbox(this)
 			local checked = not not this:GetChecked()
-			PlaySound(checked and "igMainMenuOptionCheckBoxOn" or "igMainmenuOptionCheckBoxOff")
+			PlaySound(checked and SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON or SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
 			print("toggle", class, spec, this.stat, checked or nil)
 			if checked == classDB[0][this.stat] then
 				classDB[spec][this.stat] = nil
